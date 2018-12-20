@@ -4,8 +4,9 @@ import stripe
 
 app = Flask(__name__)
 
-stripe.api_key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
-public_key = "pk_test_6pRNASC0BOKtIshFeQd4XMUh"
+public_key = 'pk_test_6pRNASCoBOKtIshFeQd4XMUh'
+
+stripe.api_key = "sk_test_BQokikJOvBiI2HlWgH4olfQ2"
 
 
 @app.route('/')
@@ -29,6 +30,7 @@ def payment():
         description = 'Donation'
     )
     return redirect(url_for('thankyou'))
+
 if __name__ == '__main__':
   app.run(debug=True)
  
